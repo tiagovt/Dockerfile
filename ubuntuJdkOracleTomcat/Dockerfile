@@ -31,13 +31,13 @@ RUN wget -q http://mirror.nbtelecom.com.br/apache/tomcat/tomcat-8/v8.5.15/bin/ap
 RUN rm apache-tomcat-*.tar.gz
 RUN mv apache-tomcat-8.5.15 tomcat
 
-RUN rm -rf /usr/local/tomcat/webapps/docs /usr/local/tomcat/webapps/ROOT /usr/local/tomcat/webapps/examples	/usr/local/tomcat/webapps/host-manager
+RUN rm -rf /usr/local/tomcat/webapps/docs /usr/local/tomcat/webapps/ROOT /usr/local/tomcat/webapps/examples /usr/local/tomcat/webapps/host-manager
 
-RUN mkdir /usr/local/tomcat/webapps/teste
+RUN mkdir /usr/local/tomcat/webapps/helloword
 
 
-RUN /bin/echo -e '<html> <h1>Tomcat Rodando </h1> </html>' > /usr/local/tomcat/webapps/teste/index.html
+RUN /bin/echo -e '<html> <h1>Hello World!</h1> </html>' > /usr/local/tomcat/webapps/helloword/index.html
 
 
 EXPOSE 8080
-CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
+CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]"]
