@@ -38,6 +38,7 @@ RUN mkdir /usr/local/tomcat/webapps/helloworld
 
 RUN /bin/echo -e '<html> <h1>Hello World!</h1> </html>' > /usr/local/tomcat/webapps/helloworld/index.html
 
+WORKDIR /usr/local/tomcat/webapps
 
 EXPOSE 8080
 CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]"]
