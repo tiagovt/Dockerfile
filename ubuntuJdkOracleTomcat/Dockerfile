@@ -33,10 +33,10 @@ RUN mv apache-tomcat-8.5.15 tomcat
 
 RUN rm -rf /usr/local/tomcat/webapps/docs /usr/local/tomcat/webapps/ROOT /usr/local/tomcat/webapps/examples /usr/local/tomcat/webapps/host-manager
 
-RUN mkdir /usr/local/tomcat/webapps/helloword
+RUN mkdir /usr/local/tomcat/webapps/helloworld
 
 
-RUN /bin/echo -e '<html> <h1>Hello World!</h1> </html>' > /usr/local/tomcat/webapps/helloword/index.html
+RUN /bin/echo -e '<html> <h1>Hello World!</h1> </html>' > /usr/local/tomcat/webapps/helloworld/index.html
 
 
 EXPOSE 8080
